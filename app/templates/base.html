@@ -18,14 +18,28 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
-                <div class="col-md-9" style="background-color: #003F87;">
+                <div class="col-md-1">
+                    {% if subpage=="home" %}<img src="/static/images/corporate-trademark.jpg" alt="Corporate Trademark" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="troop" %}<img src="/static/images/boy-scout-logo.jpg" alt="Boy Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="pack" %}<img src="/static/images/cub-scout-logo.jpg" alt="Cub Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="crew" %}<img src="/static/images/venturing-logo.jpg" alt="Venture Crew Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                </div>
+                <div class="col-md-9">
+                    <h1>Hillview Scouting - {{ title }}</h1>
+                </div>
+                <div class="col-md-2" style="background-color: #FFCC00;">
+                    Reserved for User Login/Logout
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="background-color: #003F87;">
                     <ul class="nav nav-tabs">
-                        <li {% if menu == "home" %} class="active" {% endif %}><a href="/">Home</a></li>
-                        <li {% if menu == "troop" %} class="active" {% endif %}><a href="/troop40">Troop 40</a></li>
-                        <li {% if menu == "pack" %} class="active" {% endif %}><a href="/pack40">Pack 40</a></li>
-                        <li {% if menu == "crew" %} class="active" {% endif %}><a href="/crew40">Crew 40</a></li>
+                        <li {% if subpage=="home" %}class="active"{% endif %}><a href="/">Home</a></li>
+                        <li {% if subpage=="troop" %}class="active"{% endif %}><a href="/troop40">Troop 40</a></li>
+                        <li {% if subpage=="pack" %}class="active"{% endif %}><a href="/pack40">Pack 40</a></li>
+                        <li {% if subpage=="crew" %}class="active"{% endif %}><a href="/crew40">Crew 40</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -37,9 +51,6 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
-                <div class="col-md-3" style="background-color: #FFCC00;">
-                    Reserved for User Login/Logout
                 </div>
             </div>
             <div class="row">
