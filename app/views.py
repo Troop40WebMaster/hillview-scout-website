@@ -1,12 +1,19 @@
 __author__ = 'Robert'
+from flask import render_template
 from app import app
-from flask import __version__
-import platform
 
 @app.route('/')
-@app.route('/index')
-def index():
-    announce = []
-    announce.append("New Hillview Scouting Website coming soon(ish)")
-    announce.append("Powered by Python {} and Flask {}!".format(platform.python_version(), __version__))
-    return '<br>'.join(announce)
+def landing():
+    return render_template('landing.html', title='Home')
+
+@app.route('/troop40')
+def troop40():
+    return render_template('troop40.html', title='Troop 40')
+
+@app.route('/pack40')
+def pack40():
+    return render_template('pack40.html', title='Pack 40')
+
+@app.route('/crew40')
+def crew40():
+    return render_template('crew40.html', title='Crew 40')
