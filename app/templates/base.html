@@ -21,10 +21,20 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-9" style="background-color: #003F87;">
-                    <a href="/">Home</a> |
-                    <a href="/troop40">Troop 40</a> |
-                    <a href="/pack40">Pack 40</a> |
-                    <a href="/crew40">Crew 40</a>
+                    <ul class="nav nav-tabs">
+                        <li {% if menu == "home" %} class="active" {% endif %}><a href="/">Home</a></li>
+                        <li {% if menu == "troop" %} class="active" {% endif %}><a href="/troop40">Troop 40</a></li>
+                        <li {% if menu == "pack" %} class="active" {% endif %}><a href="/pack40">Pack 40</a></li>
+                        <li {% if menu == "crew" %} class="active" {% endif %}><a href="/crew40">Crew 40</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-togle="dropdown" href="#">Other <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blablah">Blah Blah</a></li>
+                                <li><a href="blablah">Blah Blah</a></li>
+                                <li><a href="blablah">Blah Blah</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-md-3" style="background-color: #FFCC00;">
                     Reserved for User Login/Logout
