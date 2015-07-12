@@ -10,7 +10,7 @@
         <!-- Bootstrap core CSS -->
         <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="/static/style.css" rel="stylesheet">
+        <link href="/static/style.css" rel="stylesheet" type="text/css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -21,10 +21,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-1">
-                    {% if subpage=="home" %}<img src="/static/images/corporate-trademark.jpg" alt="Corporate Trademark" style="padding:4px;width:80px;height:80px">{% endif %}
-                    {% if subpage=="troop" %}<img src="/static/images/boy-scout-logo.jpg" alt="Boy Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
-                    {% if subpage=="pack" %}<img src="/static/images/cub-scout-logo.jpg" alt="Cub Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
-                    {% if subpage=="crew" %}<img src="/static/images/venturing-logo.jpg" alt="Venture Crew Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="home" %}<img src="/static/images/corporate-trademark.png" alt="Corporate Trademark" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="troop" %}<img src="/static/images/boy-scout-logo.png" alt="Boy Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="pack" %}<img src="/static/images/cub-scout-logo.png" alt="Cub Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="crew" %}<img src="/static/images/venturing-logo.png" alt="Venture Crew Logo" style="padding:4px;width:80px;height:80px">{% endif %}
                 </div>
                 <div class="col-md-9">
                     <h1>Hillview Scouting - {{ title }}</h1>
@@ -54,9 +54,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    {% block content %}{% endblock %}
-                </div>
+                {% block content %}{% endblock %}
             </div>
         </div>
         <!-- Bootstrap core JavaScript ================================================== -->
