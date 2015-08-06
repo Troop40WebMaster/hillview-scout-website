@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="col-md-12" style="background-image: url(/static/images/landing-background1.png);background-size: 100%;">
+    <div class="row" style="height: 5px"></div>
+    <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">
+            <div style="border-radius: 15px; padding: 5px; background-color: rgba(232, 232, 232, .9);">
+                <div class="row">
+                    <blockquote class="col-md-7 blockquote-reverse">
+                        <p>Where is there a boy to whom the call of the wild and the open road does not appeal?</p>
+                        <footer>Lord Baden Powell</footer>
+                    </blockquote>
+                    <img class="col-md-5 img-responsive" src="/static/images/baden_powell.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Keep this on the bottom.  It's responsible for stretching the background image height based on the available
+         width on the screen. -->
     <div style="padding-top: 70%; /* this is actually (801/1068)*100 - 5*/"></div>
 </div>
 {% endblock %}
