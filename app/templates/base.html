@@ -11,6 +11,7 @@
         <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="/static/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/assets/css/supersized.css" type="text/css" media="screen" />
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -26,9 +27,7 @@
                     {% if subpage=="pack" %}<img src="/static/images/cub-scout-logo.png" alt="Cub Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
                     {% if subpage=="crew" %}<img src="/static/images/venturing-logo.png" alt="Venture Crew Logo" style="padding:4px;width:80px;height:80px">{% endif %}
                 </div>
-                <div class="col-md-9">
-                    <h1>Hillview Scouting - {{ title }}</h1>
-                </div>
+                <div class="col-md-9"></div>
                 <div class="col-md-2" style="background-color: #FFCC00;">
                     Reserved for User Login/Logout
                 </div>
@@ -59,8 +58,17 @@
         </div>
         <!-- Bootstrap core JavaScript ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="/static/assets/js/jquery.min.js"></script>
-        <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/assets/js/supersized.3.2.7.min.js"></script>
+        <script type="text/javascript">
+	        jQuery(function($){
+		        $.supersized({
+			        slides:  [
+                    {image : '/static/images/landing-background1.png'}			]
+		        });
+	        });
+        </script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
     </body>
