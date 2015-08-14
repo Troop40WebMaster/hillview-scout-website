@@ -7,10 +7,17 @@
         <meta name="description" content="Hillview Scouting">
         <meta name="author" content="Robert Bartee">
         <title>Hillview Scouting - {{ title }}</title>
+
         <!-- Bootstrap core CSS -->
         <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+
         <!-- Custom styles for this template -->
         <link href="/static/style.css" rel="stylesheet" type="text/css">
+
+        {% if subpage=="home" %}
+            <link rel="stylesheet" href="/static/assets/css/supersized.css" type="text/css" media="screen" />
+        {% endif %}
+
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -18,48 +25,35 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-1">
-                    {% if subpage=="home" %}<img src="/static/images/corporate-trademark.png" alt="Corporate Trademark" style="padding:4px;width:80px;height:80px">{% endif %}
-                    {% if subpage=="troop" %}<img src="/static/images/boy-scout-logo.png" alt="Boy Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
-                    {% if subpage=="pack" %}<img src="/static/images/cub-scout-logo.png" alt="Cub Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
-                    {% if subpage=="crew" %}<img src="/static/images/venturing-logo.png" alt="Venture Crew Logo" style="padding:4px;width:80px;height:80px">{% endif %}
-                </div>
-                <div class="col-md-9"></div>
-                <div class="col-md-2" style="background-color: #FFCC00;">
-                    Reserved for User Login/Logout
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12" style="background-color: #003F87;">
-                    <ul class="nav nav-tabs">
-                        <li {% if subpage=="home" %}class="active"{% endif %}><a href="/">Home</a></li>
-                        <li {% if subpage=="troop" %}class="active"{% endif %}><a href="/troop40">Troop 40</a></li>
-                        <li {% if subpage=="pack" %}class="active"{% endif %}><a href="/pack40">Pack 40</a></li>
-                        <li {% if subpage=="crew" %}class="active"{% endif %}><a href="/crew40">Crew 40</a></li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="http://www.scouting.org/">Boy Scouts of America</a></li>
-                                <li><a href="http://www.oreida-bsa.org/">Ore-Ida Council</a></li>
-                                <li><a href="http://hillviewmethodist.org/">Hillview Methodist Church</a></li>
-                                <li><a href="http://www.cityofboise.org/">Boise</a></li>
-                                <li><a href="http://www.accessidaho.org/">Idaho</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                {% block content %}{% endblock %}
-            </div>
+        {% include 'header.html' %}
+        {% include 'footer.html' %}
+
+        <div class="row">
+            {% block content %}{% endblock %}
         </div>
+
         <!-- Bootstrap core JavaScript ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="/static/assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+        {% if subpage=="home" %}
+        <script type="text/javascript" src="/static/assets/js/supersized.3.2.7.min.js"></script>
+        <script type="text/javascript">
+            jQuery(function($){
+                $.supersized({
+                    slides: [
+                        {image: '/static/images/landing-background1.png'},
+                        {image: '/static/images/landing-background2.jpg'},
+                        {image: '/static/images/landing-background3.jpg'},
+                        {image: '/static/images/landing-background4.jpg'},
+                        {image: '/static/images/landing-background5.jpg'}
+                    ]
+                });
+            });
+        </script>
+        {% endif %}
     </body>
 </html>

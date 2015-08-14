@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hillview Scouting">
-    <meta name="author" content="Robert Bartee">
-    <title>Hillview Scouting - {{ title }}</title>
-    <!-- Bootstrap core CSS -->
-    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="/static/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/static/assets/css/supersized.css" type="text/css" media="screen" />
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <style>
-
-    </style>
-</head>
-<body>
-{% include 'header.html' %}
-{% include 'footer.html' %}
-
+{% extends "base.html" %}
+{% block content %}
 
 <div class="container-fluid">
     <div class="row" style="height: 10px"></div>
@@ -44,26 +19,4 @@
         </div>
     </div>
 </div>
-<div style="padding-top: 450px;"></div>
-<!-- Bootstrap core JavaScript ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="/static/assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/static/assets/js/supersized.3.2.7.min.js"></script>
-<script type="text/javascript">
-	        jQuery(function($){
-		        $.supersized({
-			        slides: [
-                        {image: '/static/images/landing-background1.png'},
-                        {image: '/static/images/landing-background2.jpg'},
-                        {image: '/static/images/landing-background3.jpg'},
-                        {image: '/static/images/landing-background4.jpg'},
-                        {image: '/static/images/landing-background5.jpg'}
-                    ]
-		        });
-	        });
-        </script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
-</body>
-</html>
+{% endblock %}

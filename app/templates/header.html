@@ -1,6 +1,36 @@
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgba(0, 0, 0, .8); color: white;">
+<nav class="navbar navbar-inverse navbar-fixed-top my-nav-color">
     <div class="container-fluid">
-        <div class="row">
-        </div>
+                <!--
+            <div class="row">
+                <div class="col-md-1">
+                    {% if subpage=="home" %}<img src="/static/images/corporate-trademark.png" alt="Corporate Trademark" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="troop" %}<img src="/static/images/boy-scout-logo.png" alt="Boy Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="pack" %}<img src="/static/images/cub-scout-logo.png" alt="Cub Scout Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                    {% if subpage=="crew" %}<img src="/static/images/venturing-logo.png" alt="Venture Crew Logo" style="padding:4px;width:80px;height:80px">{% endif %}
+                </div>
+                <div class="col-md-9"></div>
+                <div class="col-md-2" style="background-color: #FFCC00;">
+                    Reserved for User Login/Logout
+                </div>
+            </div>
+                -->
+            <div>
+                    <ul class="nav navbar-nav my-nav-color">
+                        <li {% if subpage=="home" %}class="active"{% endif %}><a href="/">Home</a></li>
+                        <li {% if subpage=="troop" %}class="active"{% endif %}><a href="/troop40">Troop 40</a></li>
+                        <li {% if subpage=="pack" %}class="active"{% endif %}><a href="/pack40">Pack 40</a></li>
+                        <li {% if subpage=="crew" %}class="active"{% endif %}><a href="/crew40">Crew 40</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Other <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.scouting.org/">Boy Scouts of America</a></li>
+                                <li><a href="http://www.oreida-bsa.org/">Ore-Ida Council</a></li>
+                                <li><a href="http://hillviewmethodist.org/">Hillview Methodist Church</a></li>
+                                <li><a href="http://www.cityofboise.org/">Boise</a></li>
+                                <li><a href="http://www.accessidaho.org/">Idaho</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            </div>
     </div>
 </nav>

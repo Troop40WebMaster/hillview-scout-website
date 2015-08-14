@@ -1,11 +1,11 @@
 .footer-header {
     border-top: 1px solid #aeaeae;
     line-height: 1.8em;
-    margin-bottom: 0.75em;
+    margin-bottom: 0.75em
 }
 
 .bq-inline {
-    display: inline-block;
+    display: inline-block
 }
 
 .footer-img {
@@ -14,4 +14,12 @@
     padding-right: 10px
 }
 
-body { padding-top: 55px; }
+.my-nav-color {
+    background-color: rgba(0, 0, 0, .8);
+    /*background-color: rgba(0, 63, 135, .9);*/
+    color: white
+}
+
+body {
+    padding-top: 55px
+}
