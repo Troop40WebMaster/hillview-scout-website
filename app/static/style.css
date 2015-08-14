@@ -1,0 +1,17 @@
+.footer-header {
+    border-top: 1px solid #aeaeae;
+    line-height: 1.8em;
+    margin-bottom: 0.75em;
+}
+
+.bq-inline {
+    display: inline-block;
+}
+
+.footer-img {
+    height: 98px;
+    float: left;
+    padding-right: 10px
+}
+
+body { padding-top: 55px; }
