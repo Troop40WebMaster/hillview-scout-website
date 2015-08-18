@@ -1,0 +1,19 @@
+{
+  "name": "hillview-scout-website",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Troop40WebMaster/hillview-scout-website",
+  "authors": [
+    "Rob Bartee <developer@hillviewscouting.org>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}
