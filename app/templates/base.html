@@ -9,10 +9,8 @@
         <title>Hillview Scouting - {{ title }}</title>
 
         <!-- Bootstrap core CSS -->
-        <!--
-        <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
-        -->
-        <link href="{{ url_for('static', filename='bower_components/bootstrap-sass/assets/stylesheets/mybootstrap.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='assets/css/scout_bs.css') }}" rel="stylesheet">
+
         <!-- Custom styles for this template -->
         <link href="/static/style.css" rel="stylesheet" type="text/css">
 
@@ -37,7 +35,7 @@
         <!-- Bootstrap core JavaScript ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="{{ url_for('static', filename='bower_components/jquery/dist/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
 
