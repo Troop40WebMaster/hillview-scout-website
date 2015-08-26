@@ -1417,7 +1417,7 @@ blockquote {
     display: block;
     font-size: 80%;
     line-height: 1.42857;
-    color: #777777; }
+    color: white; }
     blockquote footer:before,
     blockquote small:before,
     blockquote .small:before {

@@ -1,7 +1,8 @@
 .footer-header {
     border-top: 1px solid #aeaeae;
     line-height: 1.8em;
-    margin-bottom: 0.75em
+    margin-bottom: 0.75em;
+    color: white
 }
 
 .bq-inline {
