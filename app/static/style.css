@@ -6,7 +6,8 @@
 }
 
 .bq-inline {
-    display: inline-block
+    display: inline-block;
+    color: white
 }
 
 .footer-img {
