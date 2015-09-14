@@ -1,6 +1,6 @@
 __author__ = 'Robert'
 from flask import render_template
-from app import app
+from app import app, db, models
 
 @app.route('/')
 def landing():
@@ -17,3 +17,8 @@ def pack40():
 @app.route('/crew40')
 def crew40():
     return render_template('crew40.html', title='Crew 40', subpage='crew')
+
+@app.route('/db_test')
+def db_test():
+    users = models.User.query.all()
+    return '<br>'.join([str(u) for u in users])
